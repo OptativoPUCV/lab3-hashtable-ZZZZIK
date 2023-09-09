@@ -332,3 +332,23 @@ hashmap.c:93:32: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 b3d7b93
+Sat 09 Sep 2023 08:47:26 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c:93:8: error: conflicting types for ‘firstMap’; have ‘void *(HashMap *)’ {aka ‘void *(struct HashMap *)’}
+   93 | void * firstMap(HashMap * map){}
+      |        ^~~~~~~~
+In file included from hashmap.c:6,
+                 from test.c:4:
+hashmap.h:28:8: note: previous declaration of ‘firstMap’ with type ‘Pair *(HashMap *)’ {aka ‘Pair *(struct HashMap *)’}
+   28 | Pair * firstMap(HashMap * table);
+      |        ^~~~~~~~
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:93:32: error: control reaches end of non-void function [-Werror=return-type]
+   93 | void * firstMap(HashMap * map){}
+      |                                ^
+cc1: all warnings being treated as errors
+Compilation failed
+daa072f
