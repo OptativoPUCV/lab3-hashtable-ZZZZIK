@@ -79,7 +79,7 @@ Pair * searchMap(HashMap * map,  char * key) {
   long indice=hash(key,map->capacity);
   while (map->capacity>indice){
     if (strcmp(map->buckets[indice]->key,key)==0){
-      //map->current=indice;
+      map->current=indice;
       return map->buckets[indice];
     }
     indice=(indice+1) % map->capacity;
