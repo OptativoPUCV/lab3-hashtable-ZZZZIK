@@ -104,3 +104,9 @@ test.c:(.text+0x9d8): undefined reference to `insertMap'
 collect2: error: ld returned 1 exit status
 Compilation failed
 7099dfb
+Sat 09 Sep 2023 04:51:55 AM UTC: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+ tests:  1|5
+total_score: 10/70
+c8237d8
