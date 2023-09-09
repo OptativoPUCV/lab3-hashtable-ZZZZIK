@@ -76,14 +76,14 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
-  //long i=0;
   long indice=hash(key,map->capacity);
+  
   for (long i=0;i<map->capacity;i++){
-    if (map->buckets[indice]!=NULL && strcmp(map->buckets[indice]->key,key)==0){
+    if (map->buckets[indice]!= NULL && strcmp(map->buckets[indice]->key,key) ==0){
       map->current=indice;
       return map->buckets[indice];
     }
-    indice=(indice+1) % map->capacity;
+    indice=(indice+1)%map->capacity;
   }
 
   return NULL;
