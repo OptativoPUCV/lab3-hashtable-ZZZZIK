@@ -76,13 +76,16 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
+  int i=0;
   long indice=hash(key,map->capacity);
-  while (map->capacity>indice){
+  
+  while (map->capacity>i){
     if (strcmp(map->buckets[indice]->key,key)==0){
       map->current=indice;
       return map->buckets[indice];
     }
     indice=(indice+1) % map->capacity;
+    i++;
   }
   return NULL;
 } 
