@@ -281,3 +281,12 @@ hashmap.c:110:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 c1002af
+Sat 09 Sep 2023 08:46:50 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccixHte5.o: in function `first_test':
+test.c:(.text+0x1011): undefined reference to `firstMap'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0x1061): undefined reference to `firstMap'
+collect2: error: ld returned 1 exit status
+Compilation failed
+0d26359
