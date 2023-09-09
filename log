@@ -301,3 +301,34 @@ hashmap.c:93:32: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 37a509d
+Sat 09 Sep 2023 08:47:20 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c:93:1: error: unknown type name ‘Void’; did you mean ‘void’?
+   93 | Void * firstMap(HashMap * map){}
+      | ^~~~
+      | void
+hashmap.c:93:8: error: conflicting types for ‘firstMap’; have ‘int *(HashMap *)’ {aka ‘int *(struct HashMap *)’}
+   93 | Void * firstMap(HashMap * map){}
+      |        ^~~~~~~~
+In file included from hashmap.c:6,
+                 from test.c:4:
+hashmap.h:28:8: note: previous declaration of ‘firstMap’ with type ‘Pair *(HashMap *)’ {aka ‘Pair *(struct HashMap *)’}
+   28 | Pair * firstMap(HashMap * table);
+      |        ^~~~~~~~
+test.c: In function ‘first_test’:
+test.c:349:17: error: initialization of ‘Pair *’ from incompatible pointer type ‘int *’ [-Werror=incompatible-pointer-types]
+  349 |     Pair* aux = firstMap(map);
+      |                 ^~~~~~~~
+test.c:371:9: error: assignment to ‘Pair *’ from incompatible pointer type ‘int *’ [-Werror=incompatible-pointer-types]
+  371 |     aux = firstMap(map);
+      |         ^
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:93:32: error: control reaches end of non-void function [-Werror=return-type]
+   93 | Void * firstMap(HashMap * map){}
+      |                                ^
+cc1: all warnings being treated as errors
+Compilation failed
+b3d7b93
