@@ -43,6 +43,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   long indice= hash(key,map->capacity);
   
   while(1) {
+    
     if ((map->buckets[indice]==NULL)||(map->buckets[indice]->key==NULL)){
       map->buckets[indice]= createPair(key,value);
       map->current= indice;
@@ -51,9 +52,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     }   
     indice=(indice + 1) % map->capacity;
     map->buckets[indice]= map->buckets[indice];
-    continue;
   }
-  
 }
 
 
