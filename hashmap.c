@@ -76,7 +76,7 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
-  int i=0;
+  long i=0;
   long indice=hash(key,map->capacity);
   
   while (i<map->capacity){
@@ -91,8 +91,14 @@ Pair * searchMap(HashMap * map,  char * key) {
 } 
 
 Pair * firstMap(HashMap * map) {
-
-    return NULL;
+  long i=0;
+  while(i<map->capacity){
+    if (map->buckets[i]!=NULL){
+      return map->buckets[i];
+      
+    }
+  }
+  
 }
 
 Pair * nextMap(HashMap * map) {
