@@ -90,7 +90,7 @@ Pair * searchMap(HashMap * map,  char * key) {
   return NULL;
 } 
 
-//Pair * firstMap(HashMap * map) 
+Pair * firstMap(HashMap * map){}
 /*
 
 
