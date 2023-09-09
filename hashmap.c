@@ -50,11 +50,10 @@ void insertMap(HashMap * map, char * key, void * value) {
     map->current= indice;
     map->size++;
     return;    
-  }
+
   indice=(indice + 1) % map->capacity;
   map->buckets[indice]=map->buckets[indice];
-
-
+  }
 }
 
 void enlarge(HashMap * map) {
