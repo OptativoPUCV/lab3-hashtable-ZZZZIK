@@ -88,3 +88,19 @@ test.c:100:6: error: ‘hash_test1’ defined but not used [-Werror=unused-funct
 cc1: all warnings being treated as errors
 Compilation failed
 7947cac
+Sat 09 Sep 2023 04:51:31 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccRnSZSy.o: in function `insert_test1':
+test.c:(.text+0x7bb): undefined reference to `insertMap'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccRnSZSy.o: in function `insert_test2':
+test.c:(.text+0x8d2): undefined reference to `insertMap'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccRnSZSy.o: in function `insert_test3':
+test.c:(.text+0x942): undefined reference to `insertMap'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccRnSZSy.o: in function `insert_test4':
+test.c:(.text+0x9d8): undefined reference to `insertMap'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: test.c:(.text+0xa68): undefined reference to `insertMap'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccRnSZSy.o:test.c:(.text+0xb16): more undefined references to `insertMap' follow
+collect2: error: ld returned 1 exit status
+Compilation failed
+7099dfb
