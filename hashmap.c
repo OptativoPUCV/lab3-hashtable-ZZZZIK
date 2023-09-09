@@ -48,7 +48,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   while(1){
     if (map->buckets[indice]!=NULL||map->buckets[indice]->key!=NULL){
       indice=(indice + 1) % map->capacity;
-      map->buckets[indice]=map->buckets[indice];
+      //map->buckets[indice]=map->buckets[indice];
     }else{
       map->buckets[indice]= createPair(key,value);
       map->current= indice;
@@ -57,6 +57,8 @@ void insertMap(HashMap * map, char * key, void * value) {
     }
   }
 }
+
+
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
